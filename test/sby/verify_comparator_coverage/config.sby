@@ -1,10 +1,5 @@
-[tasks]
-proof mode_prove
-coverage mode_cover
-
 [options]
-mode_prove: mode prove
-mode_cover: mode cover
+mode cover
 
 [engines]
 smtbmc

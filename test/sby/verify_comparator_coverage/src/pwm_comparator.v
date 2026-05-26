@@ -1,19 +1,3 @@
-[tasks]
-proof mode_prove
-coverage mode_cover
-
-[options]
-mode_prove: mode prove
-mode_cover: mode cover
-
-[engines]
-smtbmc
-
-[script]
-read -formal pwm_comparator.v
-prep -top pwm_comparator
-
-[file pwm_comparator.v]
 `default_nettype none
 
 module pwm_comparator (

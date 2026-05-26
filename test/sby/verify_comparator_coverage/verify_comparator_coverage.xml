@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-05-26T02:26:30" hostname="924ecc3c7a56" package="verify_comparator" id="0" name="coverage" tests="6" errors="0" failures="0" time="1" skipped="5">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="coverage" name="build execution" time="0">
+</testcase>
+<testcase classname="coverage" name="Property ASSERT in pwm_comparator at pwm_comparator.v:39.17-39.40" time="0" type="ASSERT" location="pwm_comparator.v:39.17-39.40" id="_witness_.check_assert_pwm_comparator_v_39_23">
+<skipped />
+</testcase>
+<testcase classname="coverage" name="Property ASSERT in pwm_comparator at pwm_comparator.v:46.21-46.44" time="0" type="ASSERT" location="pwm_comparator.v:46.21-46.44" id="_witness_.check_assert_pwm_comparator_v_46_38">
+<skipped />
+</testcase>
+<testcase classname="coverage" name="Property ASSERT in pwm_comparator at pwm_comparator.v:48.21-48.44" time="0" type="ASSERT" location="pwm_comparator.v:48.21-48.44" id="_witness_.check_assert_pwm_comparator_v_48_41">
+<skipped />
+</testcase>
+<testcase classname="coverage" name="Property ASSERT in pwm_comparator at pwm_comparator.v:51.25-51.48" time="0" type="ASSERT" location="pwm_comparator.v:51.25-51.48" id="_witness_.check_assert_pwm_comparator_v_51_44">
+<skipped />
+</testcase>
+<testcase classname="coverage" name="Property ASSERT in pwm_comparator at pwm_comparator.v:53.25-53.48" time="0" type="ASSERT" location="pwm_comparator.v:53.25-53.48" id="_witness_.check_assert_pwm_comparator_v_53_46">
+<skipped />
+</testcase>
+<testcase classname="coverage" name="Property COVER in pwm_comparator at pwm_comparator.v:61.17-61.65" time="0" type="COVER" location="pwm_comparator.v:61.17-61.65" id="_witness_.check_cover_pwm_comparator_v_61_54" tracefile="engine_0/trace0.vcd">
+</testcase>
+<system-out>SBY  2:26:28 [verify_comparator_proof] Removing directory '/foss/designs/TTSky-PWM/test/sby/verify_comparator_proof'.
+SBY  2:26:29 [verify_comparator_coverage] Removing directory '/foss/designs/TTSky-PWM/test/sby/verify_comparator_coverage'.
+SBY  2:26:29 [verify_comparator_coverage] Writing '/foss/designs/TTSky-PWM/test/sby/verify_comparator_coverage/src/pwm_comparator.v'.
+SBY  2:26:29 [verify_comparator_coverage] engine_0: smtbmc
+SBY  2:26:29 [verify_comparator_coverage] base: starting process &quot;cd verify_comparator_coverage/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  2:26:29 [verify_comparator_coverage] base: finished (returncode=0)
+SBY  2:26:29 [verify_comparator_coverage] prep: starting process &quot;cd verify_comparator_coverage/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  2:26:29 [verify_comparator_coverage] prep: finished (returncode=0)
+SBY  2:26:29 [verify_comparator_coverage] smt2: starting process &quot;cd verify_comparator_coverage/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  2:26:29 [verify_comparator_coverage] smt2: finished (returncode=0)
+SBY  2:26:29 [verify_comparator_coverage] engine_0: starting process &quot;cd verify_comparator_coverage; yosys-smtbmc --presat --unroll -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Solver: yices
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Reached cover statement in step 2 at pwm_comparator: pwm_comparator.v:61.17-61.65 (_witness_.check_cover_pwm_comparator_v_61_54)
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  2:26:30 [verify_comparator_coverage] engine_0: ##   0:00:00  Status: passed
+SBY  2:26:30 [verify_comparator_coverage] engine_0: finished (returncode=0)
+SBY  2:26:30 [verify_comparator_coverage] engine_0: Status returned by engine: pass
+SBY  2:26:30 [verify_comparator_coverage] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY  2:26:30 [verify_comparator_coverage] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY  2:26:30 [verify_comparator_coverage] summary: engine_0 (smtbmc) returned pass
+SBY  2:26:30 [verify_comparator_coverage] summary: cover trace: verify_comparator_coverage/engine_0/trace0.vcd
+SBY  2:26:30 [verify_comparator_coverage] summary:   reached cover statement pwm_comparator._witness_.check_cover_pwm_comparator_v_61_54 at pwm_comparator.v:61.17-61.65 step 2
+SBY  2:26:30 [verify_comparator_coverage] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
