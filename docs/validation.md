@@ -12,15 +12,15 @@ This document defines the validation items corresponding to the system requireme
 
 ### VAL-03: Active Duty Cycle Generation Test
 * **Requirement:** [Verifies REQ-03](specification.md#req-03-active-duty-cycle-generation)
-* **Method:** Set `period_cfg` to `8'd99` and `duty_cfg` to `8'd25`. The testbench shall monitor `pwm_out` over one full period, asserting that it remains `1` for exactly 25 clock cycles and `0` for exactly 75 clock cycles.
+* **Method:** Set `period_cfg` to `8'd19` and `duty_cfg` to `8'd5`. The testbench shall monitor `pwm_out` over one full period, asserting that it remains `1` for exactly 5 clock cycles and `0` for exactly 15 clock cycles.
 
 ### VAL-04: 100% Duty Cycle Saturation Test
 * **Requirement:** [Verifies REQ-04](specification.md#req-04-100-duty-cycle-saturation)
-* **Method:** Set `period_cfg` to `8'd100` and `duty_cfg` to `8'd150`. Formal Verification (SymbiYosys) will be used to `assert(pwm_out == 1)` continuously, proving the output saturates high when the duty request exceeds the period.
+* **Method:** Set `period_cfg` to `8'd9` and `duty_cfg` to `8'd15`. Formal Verification (SymbiYosys) will be used to `assert(pwm_out == 1)` continuously, proving the output saturates high when the duty request exceeds the period.
 
 ### VAL-05: 0% Duty Cycle Priority Test
 * **Requirement:** [Verifies REQ-05](specification.md#req-05-0-duty-cycle-priority)
-* **Method:** Set `period_cfg` to `8'd100` and `duty_cfg` to `8'd0`. Formal Verification will be used to `assert(pwm_out == 0)` continuously for at least 300 clock cycles, proving the off-state behaves correctly.
+* **Method:** Set `period_cfg` to `8'd9` and `duty_cfg` to `8'd0`. Formal Verification will be used to `assert(pwm_out == 0)` continuously for at least 300 clock cycles, proving the off-state behaves correctly.
 
 ### VAL-06: Synchronous Disable Test
 * **Requirement:** [Verifies REQ-06](specification.md#req-06-synchronous-disable)

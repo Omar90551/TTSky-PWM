@@ -1,0 +1,64 @@
+# --- 1. System Signals ---
+# Connect the 12 MHz oscillator to your clock port
+set_io -nowarn clk        35
+
+# Connect Reset to the main board button (Active Low)
+set_io -nowarn rst_n      10
+
+# Connect Enable to PMOD 2 Button 1
+set_io -nowarn ena        20
+
+# --- 2. PWM Output ---
+# Connect your main PWM signal to PMOD 2 LED 1 so you can see it dim/brighten!
+set_io -nowarn uo_out[0]  26
+
+# Map the rest of the unused uo_out bits to other LEDs just to satisfy the compiler
+set_io -nowarn uo_out[1]  27  # LED2
+set_io -nowarn uo_out[2]  25  # LED3
+set_io -nowarn uo_out[3]  23  # LED4
+set_io -nowarn uo_out[4]  21  # LED5
+set_io -nowarn uo_out[5]  11  # LEDR_N
+set_io -nowarn uo_out[6]  37  # LEDG_N
+set_io -nowarn uo_out[7]  39  # LED_RED_N
+
+# --- 3. Configuration Inputs (Period & Duty Cycle) ---
+# Map Period (ui_in) to the PMOD 1A header pins
+set_io -nowarn ui_in[0]   4
+set_io -nowarn ui_in[1]   2
+set_io -nowarn ui_in[2]   47
+set_io -nowarn ui_in[3]   45
+set_io -nowarn ui_in[4]   3
+set_io -nowarn ui_in[5]   48
+set_io -nowarn ui_in[6]   46
+set_io -nowarn ui_in[7]   44
+
+# Map Duty Cycle (uio_in) to the PMOD 1B header pins
+set_io -nowarn uio_in[0]  43
+set_io -nowarn uio_in[1]  38
+set_io -nowarn uio_in[2]  34
+set_io -nowarn uio_in[3]  31
+set_io -nowarn uio_in[4]  42
+set_io -nowarn uio_in[5]  36
+set_io -nowarn uio_in[6]  32
+set_io -nowarn uio_in[7]  28
+
+# --- 4. Unused Bidirectional Ports ---
+# The Tiny Tapeout wrapper requires these to be mapped. 
+#  assign them to unused pins (like the SPI Flash pins) 
+set_io -nowarn uio_out[0] 14
+set_io -nowarn uio_out[1] 17
+set_io -nowarn uio_out[2] 12
+set_io -nowarn uio_out[3] 13
+set_io -nowarn uio_out[4] 15
+set_io -nowarn uio_out[5] 16
+set_io -nowarn uio_out[6] 18
+set_io -nowarn uio_out[7] 19
+
+set_io -nowarn uio_oe[0]  6
+set_io -nowarn uio_oe[1]  9
+set_io -nowarn uio_oe[2]  40
+set_io -nowarn uio_oe[3]  41
+set_io -nowarn uio_oe[4]  6
+set_io -nowarn uio_oe[5]  9
+set_io -nowarn uio_oe[6]  40
+set_io -nowarn uio_oe[7]  41
