@@ -1,8 +1,0 @@
-# running in verify_counter_coverage/src/
-read -formal pwm_counter.v
-prep -top pwm_counter
-
-hierarchy -smtcheck
-rename -witness
-write_jny -no-connections ../model/design.json
-write_rtlil ../model/design.il

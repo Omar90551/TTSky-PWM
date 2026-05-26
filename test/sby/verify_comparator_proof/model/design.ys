@@ -1,8 +1,0 @@
-# running in verify_comparator_proof/src/
-read -formal pwm_comparator.v
-prep -top pwm_comparator
-
-hierarchy -smtcheck
-rename -witness
-write_jny -no-connections ../model/design.json
-write_rtlil ../model/design.il

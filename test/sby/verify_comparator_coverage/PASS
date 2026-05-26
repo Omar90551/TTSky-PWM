@@ -1,6 +1,0 @@
-Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
-Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
-engine_0 (smtbmc) returned pass
-cover trace: engine_0/trace0.vcd
-cover trace: engine_0/trace0.yw
-  reached cover statement pwm_comparator._witness_.check_cover_pwm_comparator_v_61_54 at pwm_comparator.v:61.17-61.65 step 2

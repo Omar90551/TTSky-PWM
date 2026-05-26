@@ -59,7 +59,7 @@ module pwm_counter (
             end
         end
 
-        // COVER: Can the counter actually reach 10?
+        // COVER: Can the counter actually reach 10?d
         always @(posedge clk) begin
             if (rst_n && enable && period_cfg == 8'd10)
                 cover(count_out == 8'd10);
