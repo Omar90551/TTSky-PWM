@@ -2,7 +2,7 @@
 project:
   title:        "PWM Generator"
   author:       "Omar, Nitin"
-  github:       "Omar90551, palnitin24"
+  github:       "Omar90551/TTSky-PWM" 
   description:  "A PWM generator with configurable period and duty cycle via 8-bit input pins"
   language:     "Verilog"
   clock_hz:     10000000
@@ -29,13 +29,13 @@ pinout:
 
   # Outputs
   uo[0]: "pwm_out"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[1]: "Unused (Grounded)"
+  uo[2]: "Unused (Grounded)"
+  uo[3]: "Unused (Grounded)"
+  uo[4]: "Unused (Grounded)"
+  uo[5]: "Unused (Grounded)"
+  uo[6]: "Unused (Grounded)"
+  uo[7]: "Unused (Grounded)"
 
   # Bidirectional pins (used as inputs)
   uio[0]: "duty_cfg bit 0"
@@ -47,5 +47,4 @@ pinout:
   uio[6]: "duty_cfg bit 6"
   uio[7]: "duty_cfg bit 7"
 
-# Do not change!
 yaml_version: 6

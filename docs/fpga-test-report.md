@@ -1,4 +1,4 @@
-# Silicon Testing Procedure — PWM Generator
+# FPGA Testing Procedure — PWM Generator
 
 This document outlines how to test the physical chip after manufacturing to prove it matches all requirements in our specification.
 
@@ -107,7 +107,7 @@ This document outlines how to test the physical chip after manufacturing to prov
 
 ---
 
-## 4. Post-Silicon Checklist
+## 4. FPGA Checklist
 
 | Test Item | Feature Verified | Expected Scope Waveform Result | Pass / Fail |
 |:---|:---|:---|:---|
