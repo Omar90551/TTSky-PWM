@@ -1,0 +1,11 @@
+MAC :
+
+source /path/to/oss-cad-suite/environment
+system_profiler SPUSBDataType
+make prog_fpga
+
+
+LINUX :
+source ~/Downloads/oss-cad-suite/environment
+cd ~/path/to/your/TTSky-PWM
+make prog_fpga
