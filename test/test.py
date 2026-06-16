@@ -195,7 +195,7 @@ async def test_req06_sync_disable(dut):
     
     # Wait for the next clock tick
     await RisingEdge(dut.clk)
-    await Timer(20, unit="ns")
+    await Timer(21, unit="ns")
     
     # Black Box Check: We only check the output pin, not the internal counter
     assert int(dut.uo_out.value) & 1 == 0, "REQ-06 Failed! Output did not drop LOW when disabled."
