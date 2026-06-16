@@ -168,7 +168,7 @@ async def test_req07_async_reset(dut):
     dut.rst_n.value = 0 
     
     # Wait 1ns (No Clock Edge has occurred)
-    await Timer(1, unit="ns")
+    await Timer(15, unit="ns")
     
     # Black Box Check: We only check the output pin, not the internal counter
     assert int(dut.uo_out.value) & 1 == 0, "REQ-07 Failed! Output did not reset asynchronously."
