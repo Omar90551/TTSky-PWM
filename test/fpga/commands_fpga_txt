@@ -9,3 +9,5 @@ LINUX :
 source ~/Downloads/oss-cad-suite/environment
 cd ~/path/to/your/TTSky-PWM
 make prog_fpga
+
+python3 tt-support-tools/tt_fpga.py harden --source_dir ./src --top_module tt_um_PWM
